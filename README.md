@@ -3,6 +3,10 @@ Following are the steps for an LLD
 2. Write down the functionality in terms of functions and objects 
 3. write down your code in form of objects(OOPS and SOLID , KISS(keep it simple stupid) , YAGNI(You aint gonna need it ))
 4. There must be an api interface to your module , use api interface and packages and functions to split your code into manageable chunks 
+5. The relationship between objects can be one to one , one to many and many to many , or object may be independent , there may be parent child relationship 
+6. Try catch comment logs 
+7. try not to have cyclic dependency amongst packages  
+
 Game Engine
 
 Functional Requirement

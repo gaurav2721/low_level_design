@@ -6,7 +6,7 @@ import (
 )
 
 type Board interface {
-	RegisterPlayer(player []players.Player) ([]bool, []error)
+	RegisterPlayers(player []players.Player) (bool, error)
 	Start() (bool, error)
 	IsStarted() (bool, error)
 	IsRegistered(player []players.Player) ([]bool, []error)
