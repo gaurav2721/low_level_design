@@ -1,6 +1,7 @@
 package move
 
 type Move struct {
-	Row int
-	Col int
+	Row    int
+	Col    int
+	Marker byte
 }

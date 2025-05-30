@@ -8,13 +8,13 @@ import (
 )
 
 type GameEngine interface {
-	GetBoard(game string) (board.Board, error)
+	GetBoard(game string) (board.IBoard, error)
 }
 
 type gameEngineChild struct {
 }
 
-func (ge gameEngineChild) GetBoard(game string) (board.Board, error) {
+func (ge gameEngineChild) GetBoard(game string) (board.IBoard, error) {
 	if game == constants.TickTackToe {
 		return &board.TickTackToe{}, nil
 	} else {
@@ -22,6 +22,6 @@ func (ge gameEngineChild) GetBoard(game string) (board.Board, error) {
 	}
 }
 
-func Initialize(game string) (board.Board, error) {
+func Initialize(game string) (board.IBoard, error) {
 	return gameEngineChild{}.GetBoard(game)
 }

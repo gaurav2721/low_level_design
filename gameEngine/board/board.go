@@ -5,11 +5,11 @@ import (
 	"github.com/gaurav2721/low_level_design/gameEngine/players"
 )
 
-type Board interface {
-	RegisterPlayers(player []players.Player) (bool, error)
+type IBoard interface {
+	RegisterPlayers(playerArr []players.IPlayer) (bool, error)
 	Start() (bool, error)
 	IsStarted() (bool, error)
-	IsRegistered(player []players.Player) ([]bool, []error)
+	IsRegistered(player players.IPlayer) (bool, error)
 	IsFinished() (bool, error)
-	Move(player players.Player, move move.Move) (bool, error)
+	Move(player players.IPlayer, m move.Move) (bool, error)
 }
